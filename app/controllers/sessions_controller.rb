@@ -8,13 +8,19 @@ class SessionsController < ApplicationController
     return render action: 'new' unless @user
     # logged in
     session[:user_id] = @user.id
-    redirect_to cities_path
+    login_user!(@user)
   end
 
   def destroy
-  session[:user_id] = nil
-  flash[:notice] = "Logged out successfully"
-  redirect_to root_path
-end
+    session[:user_id] = nil
+    flash[:notice] = "Logged out successfully"
+    redirect_to root_path
+  end
+
+  def login_user!(user)
+    session[:user_id] = @user.id
+    flash[:notice] = "Welcome, you're now logged in"
+    redirect_to root_path
+  end
 
 end
