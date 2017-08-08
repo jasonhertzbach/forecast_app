@@ -39,6 +39,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem "rspec-rails", "~> 3.6"
 end
 
 group :development do
@@ -55,9 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added at 2017-08-08 12:26:55 -0400 by jason:
 gem "httparty", "~> 0.15.6"
-
-# Added at 2017-08-08 12:27:46 -0400 by jason:
-gem "rspec-rails", "~> 3.6"
 
 # Added at 2017-08-08 14:00:39 -0400 by jason:
 gem "dotenv-rails", "~> 2.2"
