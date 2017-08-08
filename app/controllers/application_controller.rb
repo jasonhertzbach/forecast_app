@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :require_logged_in, except: [:home]
+  include CitiesHelper
 
   helper_method :current_user
 

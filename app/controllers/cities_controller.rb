@@ -25,15 +25,17 @@ class CitiesController < ApplicationController
   # POST /cities.json
   def create
     @city = current_user.cities.new(city_params)
+    created = weather_get(params[:city][:name])
+    if created
 
-    respond_to do |format|
+      @city = current_user.cities.new(city_params)
       if @city.save
-        format.html { redirect_to @city, notice: 'City was successfully created.' }
-        format.json { render :show, status: :created, location: @city }
+        redirect_to cities_path, notice: "City added."
       else
-        format.html { render :new }
-        format.json { render json: @city.errors, status: :unprocessable_entity }
+        render :new
       end
+    else
+      redirect_to cities_path, notice: "City unavailable. Please try again."
     end
   end
 
@@ -62,13 +64,13 @@ class CitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_city
-      @city = current_user.cities.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_city
+    @city = current_user.cities.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def city_params
-      params.require(:city).permit(:user_id, :name)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def city_params
+    params.require(:city).permit(:user_id, :name)
+  end
 end

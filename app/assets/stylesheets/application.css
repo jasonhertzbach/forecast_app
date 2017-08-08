@@ -43,3 +43,14 @@
    margin: auto;
    width: 60%;
  }
+
+ #weather-tile {
+   background: #adc3d1;
+   display: inline-block;
+   position: relative;
+   width: 30%;
+   background-size: contain;
+   border-radius: 20px;
+   text-align: center;
+   margin: 1%;
+ }
