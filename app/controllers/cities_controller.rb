@@ -4,12 +4,14 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
+    @weather = weather_get(@city.name)
     @cities = current_user.cities.all
   end
 
   # GET /cities/1
   # GET /cities/1.json
   def show
+    @weather = weather_get(@city.name)
   end
 
   # GET /cities/new

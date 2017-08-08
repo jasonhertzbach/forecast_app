@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
+<h2 style=font-size:40px; font-weight: bold; class='text-center'> Current Weather for <%= @weather.parsed_response['name'] %> ,
+<%= @weather.parsed_response['sys']['country'] %>
 
-<p>
-  <strong>User:</strong>
-  <%= @city.user %>
-</p>
+<h3><strong>Weather</strong>: <%= @weather.parsed_response['weather'][0]['main'] %> </h3>
+<h3><strong>Description</strong>: <%= @weather.parsed_response['weather'][0]['description'] %> </h3>
+<h3><strong>Temperature</strong>: <%= @weather.parsed_response['main']['temp'] %> </h3>
+<h3><strong>Presure</strong>: <%= @weather.parsed_response['main']['pressure'] %> </h3>
+<h3><strong>Humidity</strong>: <%= @weather.parsed_response['main']['humidity'] %> </h3>
+<h3><strong>Low Temperature</strong>: <%= @weather.parsed_response['main']['temp_min'] %> </h3>
+<h3><strong>Max Temperature</strong>: <%= @weather.parsed_response['main']['temp_max'] %> </h3>
+<h3><strong>Wind Speed</strong>: <%= @weather.parsed_response['wind']['speed'] %> </h3>
+<h3><strong>Wind Direction</strong>: <%= @weather.parsed_response['wind']['deg'] %> </h3>
 
 <p>
   <strong>Name:</strong>
   <%= @city.name %>
 </p>
+
 
 <%= link_to 'Edit', edit_city_path(@city) %> |
 <%= link_to 'Back', cities_path %>
