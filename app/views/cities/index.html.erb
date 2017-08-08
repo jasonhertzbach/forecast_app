@@ -1,29 +1,24 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Cities</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @cities.each do |city| %>
-      <tr>
-        <td><%= city.user %></td>
-        <td><%= city.name %></td>
-        <td><%= link_to 'Show', city %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+<% @cities.each do |city| %>
 
-<%= link_to 'New City', new_city_path %>
+
+<div id="weather-tile">
+  <h2 style=font-size:20px; font-weight: bold; > Current Weather for <%= weather_get(city.name).parsed_response['name'] %> ,
+    <%= weather_get(city.name).parsed_response['sys']['country'] %></h2>
+
+    <h3><strong>Weather</strong>: <%= weather_get(city.name).parsed_response['weather'][0]['main'] %> </h3>
+    <h3><strong>Temperature</strong>: <%= weather_get(city.name).parsed_response['main']['temp'] %> </h3>
+    <h3><strong>Low Temperature</strong>: <%= weather_get(city.name).parsed_response['main']['temp_min'] %> </h3>
+    <h3><strong>Max Temperature</strong>: <%= weather_get(city.name).parsed_response['main']['temp_max'] %> </h3>
+
+    <td><%= link_to 'Show', city %></td>
+    <td><%= link_to 'Edit', edit_city_path(city) %></td>
+    <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</div>
+
+  <% end %>
+  <br>
+  <%= link_to 'New City', new_city_path %>
