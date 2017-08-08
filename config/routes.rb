@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cities
   root 'sessions#new'
   resource :users
   resource :sessions
