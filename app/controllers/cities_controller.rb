@@ -1,10 +1,10 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_logged_in
   # GET /cities
   # GET /cities.json
   def index
-    @cities = City.all
+    @cities = current_user.cities.all
   end
 
   # GET /cities/1
@@ -14,7 +14,7 @@ class CitiesController < ApplicationController
 
   # GET /cities/new
   def new
-    @city = City.new
+    @city = current_user.cities.new
   end
 
   # GET /cities/1/edit
@@ -24,7 +24,7 @@ class CitiesController < ApplicationController
   # POST /cities
   # POST /cities.json
   def create
-    @city = City.new(city_params)
+    @city = current_user.cities.new(city_params)
 
     respond_to do |format|
       if @city.save
@@ -64,7 +64,7 @@ class CitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_city
-      @city = City.find(params[:id])
+      @city = current_user.cities.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
