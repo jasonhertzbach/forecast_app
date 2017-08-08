@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added at 2017-08-08 12:26:55 -0400 by jason:
 gem "httparty", "~> 0.15.6"
+
+# Added at 2017-08-08 12:27:46 -0400 by jason:
+gem "rspec-rails", "~> 3.6"
