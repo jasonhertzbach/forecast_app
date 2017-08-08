@@ -1,11 +1,11 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
-  before_action :require_logged_in
+  before_action :authorize, except: [:home]
   # GET /cities
   # GET /cities.json
   def index
     @cities = current_user.cities.all
-  
+
   end
 
   # GET /cities/1

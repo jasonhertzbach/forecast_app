@@ -58,3 +58,6 @@ gem "httparty", "~> 0.15.6"
 
 # Added at 2017-08-08 12:27:46 -0400 by jason:
 gem "rspec-rails", "~> 3.6"
+
+# Added at 2017-08-08 14:00:39 -0400 by jason:
+gem "dotenv-rails", "~> 2.2"
