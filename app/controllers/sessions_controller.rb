@@ -4,23 +4,24 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(username: params[:username]).try(:authenticate, params[:password])
-    return render action: 'new' unless @user
-    # logged in
-    session[:user_id] = @user.id
-    login_user!(@user)
+    @user = User.find_by(username: params[:user][:username])
+    if @user && @user.authenticate(params[:user][:password])
+      login_user!(@user)
+    else
+      flash.now[:error] = "Invalid username or password"
+      render :new
+    end
   end
+    def destroy
+      session[:user_id] = nil
+      flash[:notice] = "Logged out successfully"
+      redirect_to root_path
+    end
 
-  def destroy
-    session[:user_id] = nil
-    flash[:notice] = "Logged out successfully"
-    redirect_to root_path
+    def login_user!(user)
+      session[:user_id] = @user.id
+      flash[:notice] = "Welcome, you're now logged in"
+      redirect_to root_path
+    end
+
   end
-
-  def login_user!(user)
-    session[:user_id] = @user.id
-    flash[:notice] = "Welcome, you're now logged in"
-    redirect_to root_path
-  end
-
-end
