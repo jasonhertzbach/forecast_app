@@ -13,17 +13,14 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "validation" do
-    it "should not let a user be created without an email" do
-      @user.email = nil
-      expect(@user).to_not be_valid
-    end
+  it "should not let a user be created without an email" do
+    @user.email = nil
+    expect(@user).to_not be_valid
   end
 
-  describe "validation" do
-    it "should not let a user be created without a password" do
-      @user.password_digest = nil
-      expect(@user).to_not be_valid
-    end
+  it "should not let a user be created without a password" do
+    @user.password_digest = nil
+    expect(@user).to_not be_valid
   end
+
 end
