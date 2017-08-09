@@ -13,8 +13,8 @@ RSpec.describe City, type: :model do
     end
   end
 
-  it "should not let a user be created without an email" do
+  it "should not let a city be created without an user_id" do
     @city.user_id = nil
-    expect(@user).to_not be_valid
+    expect(@city).to_not be_valid
   end
 end
