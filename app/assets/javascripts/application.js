@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-$(document).ready(function() {
+document.addEventListener("turbolinks:load", function() {
   $('#submitWeather').on('click', onClickGetWeatherData);
 });
 
