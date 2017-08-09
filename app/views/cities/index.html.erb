@@ -1,6 +1,6 @@
-<div><h1>Cities</h1>
-<h1><%= link_to 'New City', new_city_path %></h1>
-</div>
+
+<h1><center> <%= link_to 'Add a new city to your profile', new_city_path %></center></h1>
+
 
 
 <% @cities.each do |city| %>
@@ -32,7 +32,7 @@
           <p class="temp">
             <span><h1 class="heading-2"><strong><%= weather_get(city.name).parsed_response['weather'][0]['main'] %></strong></h1></span>
           </p>
-          <h1 class="heading"><%= link_to 'Show more information', city %></h1>
+          <h1 class="heading-3"><%= link_to 'Show more information', city %></h1>
         </div>
       </div>
       <div class="bottom">
@@ -40,16 +40,16 @@
           <ul class="forecast">
             <a href="javascript:;"><span class="lnr lnr-chevron-up go-up"></span></a>
             <li class="active">
-              <span class="date">Low Temperature</span>
+              <span class="date">Max Temperature</span>
               <span class="lnr lnr-sun condition">
-                <span class="temp"> <%= weather_get(city.name).parsed_response['main']['temp_min'] %>
+                <span class="temp"> <%= weather_get(city.name).parsed_response['main']['temp_max'] %>
                   <span class="deg">0</span><span class="temp-type">F</span></span>
                 </span>
               </li>
               <li class="active">
-                <span class="date">Max Temperature</span>
+                <span class="date">Min Temperature</span>
                 <span class="lnr lnr-cloud condition">
-                  <span class="temp"><%= weather_get(city.name).parsed_response['main']['temp_max'] %><span class="deg">0</span><span class="temp-type">F</span></span>
+                  <span class="temp"><%= weather_get(city.name).parsed_response['main']['temp_min'] %><span class="deg">0</span><span class="temp-type">F</span></span>
                 </span>
               </li>
             </ul>
