@@ -1,6 +1,8 @@
 <div><h1>Cities</h1>
 <h1><%= link_to 'New City', new_city_path %></h1>
 </div>
+
+
 <% @cities.each do |city| %>
 
 <!-- <div class="col"> -->
@@ -60,4 +62,5 @@
         </div>
       </div>
     </div>
-    <% end %>
+
+    <% end if @cities.any? %>
