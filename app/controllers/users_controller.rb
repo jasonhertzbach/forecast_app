@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def login_user!(user)
     session[:user_id] = @user.id
     flash[:notice] = "Welcome, you're now logged in"
-    redirect_to root_path
+    redirect_to cities_path
   end
 
 end
