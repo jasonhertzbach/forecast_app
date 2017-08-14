@@ -1,24 +1,4 @@
-# README
+A simple weather app created using ruby on rails using the open-weather API.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+work is still in progress.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
