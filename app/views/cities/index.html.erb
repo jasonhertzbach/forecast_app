@@ -5,13 +5,44 @@
 
 <% @cities.each do |city| %>
 
-<!-- <div class="col"> -->
+
 <div class="col-md-6">
   <div class="weather-card one ">
-    <div class="top">
+
+    <% if  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Clouds" %>
+    <div class="top-cloud">
+
+      <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Thunderstorm" %>
+      <div class="top-Thunderstorm">
+
+        <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Drizzle" %>
+        <div class="top-Drizzle">
+
+          <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Rain" %>
+          <div class="top-Rain">
+
+            <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Snow" %>
+            <div class="top-Snow">
+
+              <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Atmosphere" %>
+              <div class="top-Atmosphere">
+
+                <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Clear" %>
+                <div class="top-Clear">
+
+                  <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Extreme" %>
+                  <div class="top-Extreme">
+
+                    <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Additional" %>
+                    <div class="top-Additional">
+
+      <% else %>
+      <div class="top">
+<% end %>
+
       <div class="wrapper">
         <div class="mynav">
-          <!-- <a href="javascript:;"><span class="lnr lnr-chevron-left"></span></a> -->
+
 
           <%= link_to  city, method: :delete, data: { confirm: 'Are you sure?' } do  %>
           <span class="lnr lnr-cross-circle"></span>
@@ -53,7 +84,6 @@
                 </span>
               </li>
             </ul>
-            <!-- </div> -->
           </div>
 
 

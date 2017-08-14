@@ -29,12 +29,19 @@ th { border-bottom: 1px solid #DDD; }
   margin:auto;
   text-align: center;
   width: 60%;
+  padding: 5%;
 }
 
 input[type="text"] {
   height: 40px;
   font-size: 20px;
+
 }
+
+.text-center {
+  color: rgba(40, 57, 101, 0.9);
+}
+
 
 #submitWeather {
   height: 40px;
@@ -77,43 +84,166 @@ input[type="text"] {
   height: 570px;
   width: 100%;
   overflow: hidden;
-
+  background: rgba(0, 0, 0, 0.5);
   background-position: center center;
   text-align: center;
 }
-.weather-card .top .wrapper {
+.weather-card .top-cloud {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://cdn.pixabay.com/photo/2014/07/04/10/15/sky-383823_960_720.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Thunderstorm {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://cdn.pixabay.com/photo/2017/08/01/22/38/flash-2568381_960_720.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Drizzle {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://files.differencebetween.com/wp-content/uploads/2014/11/Difference-Between-Showers-and-Rain.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Rain {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://globe-views.com/dcim/dreams/rain/rain-06.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Snow {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://media.idownloadblog.com/wp-content/uploads/2016/01/bokeh-snow-flare-water-white-splash-pattern-9-wallpaper.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Atmosphere {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://eskipaper.com/images/fog-7.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Clear {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+    background: url("http://4.bp.blogspot.com/_tOJ-lqBX0wQ/TKzHK2u3PmI/AAAAAAAAAD0/yBauow-LYT4/s1600/Kayla+October+4+012.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Extreme {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://www.pannondoktor.hu/wp-content/uploads/2017/03/szelsoseges-idojaras-1170x528.jpg");
+  background-position: center center;
+  text-align: center;
+}
+.weather-card .top-Additional {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://www.phantomacademy.com/wp-content/uploads/2016/07/windy-drone.jpg");
+  background-position: center center;
+  text-align: center;
+}
+
+
+.weather-card .top-cloud .wrapper {
   padding: 30px;
   position: relative;
   z-index: 1;
 }
-.weather-card .top .wrapper .mynav {
+.weather-card .top-Thunderstorm .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Drizzle .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Rain .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Snow .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Atmosphere .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Clear .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Extreme .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.weather-card .top-Additional .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.mynav {
   height: 20px;
 }
-.weather-card .top .wrapper .mynav .lnr {
+.wrapper .mynav .lnr {
   color: #fff;
   font-size: 20px;
 }
-.weather-card .top .wrapper .mynav .lnr-chevron-left {
+.wrapper .mynav .lnr-chevron-left {
   display: inline-block;
   float: left;
 }
-.weather-card .top .wrapper .mynav .lnr-cross-circle {
+.wrapper .mynav .lnr-cross-circle {
   display: inline-block;
   float: right;
 }
-.weather-card .top .wrapper .heading {
+.wrapper .heading {
   margin-top: 20px;
   font-size: 35px;
   font-weight: 400;
   color: #fff;
 }
-.weather-card .top .wrapper .heading-2 {
+.wrapper .heading-2 {
   margin-top: 20px;
   font-size: 50px;
   font-weight: 400;
   color: #fff;
 }
-.weather-card .top .wrapper .heading-3 {
+.wrapper .heading-3 {
   margin-top: 20px;
   font-size: 50px;
   font-weight: 400;
@@ -122,29 +252,29 @@ input[type="text"] {
   color: inherit;
 
 }
-.weather-card .top .wrapper .location {
+.top .wrapper .location {
   margin-top: 20px;
   font-size: 21px;
   font-weight: 400;
   color: #fff;
 }
-.weather-card .top .wrapper .temp {
+.wrapper .temp {
   margin-top: 20px;
 }
-.weather-card .top .wrapper .temp a {
+ .wrapper .temp a {
   text-decoration: none;
   color: #fff;
 }
-.weather-card .top .wrapper .temp a .temp-type {
+.wrapper .temp a .temp-type {
   font-size: 85px;
 }
-.weather-card .top .wrapper .temp .temp-value {
+.wrapper .temp .temp-value {
   display: inline-block;
   font-size: 85px;
   font-weight: 600;
   color: #fff;
 }
-.weather-card .top .wrapper .temp .deg {
+.wrapper .temp .deg {
   display: inline-block;
   font-size: 35px;
   font-weight: 600;
@@ -152,16 +282,7 @@ input[type="text"] {
   vertical-align: top;
   margin-top: -20px;
 }
-.weather-card .top:after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
+
 .weather-card .bottom {
   padding: 0 30px;
   background: #fff;
