@@ -64,3 +64,6 @@ gem "dotenv-rails", "~> 2.2"
 gem "bootstrap-sass", "~> 3.3"
 
 gem 'actionpack-action_caching'
+
+# Added at 2017-08-15 17:58:45 -0400 by jason:
+gem "rails-observers", "~> 0.1.5"
