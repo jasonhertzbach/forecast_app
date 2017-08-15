@@ -1,8 +1,10 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:home]
-  # GET /cities
-  # GET /cities.json
+
+  # caches_page :home
+  caches_action :index, expires_in: 60
+
   def index
     @cities = current_user.cities.all
 
