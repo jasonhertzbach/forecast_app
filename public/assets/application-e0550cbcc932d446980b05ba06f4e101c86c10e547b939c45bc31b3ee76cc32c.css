@@ -1,0 +1,762 @@
+/* line 1, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /home/jason/forecast_app/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
+@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
+/* line 17, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+body {
+  margin: 0;
+  color: #6a6f8c;
+  background: #5d99a8;
+  font: 600 16px/18px 'Open Sans',sans-serif;
+  padding-top: 100px;
+}
+
+/* line 25, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+footer {
+  margin-top: 100px;
+}
+
+/* line 26, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+table, td, th {
+  vertical-align: middle;
+  border: none;
+}
+
+/* line 27, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+th {
+  border-bottom: 1px solid #DDD;
+}
+
+/* line 29, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+#rowDiv {
+  margin: auto;
+  text-align: center;
+  width: 60%;
+  padding: 5%;
+}
+
+/* line 36, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+input[type="text"] {
+  height: 40px;
+  font-size: 20px;
+}
+
+/* line 42, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.text-center {
+  color: rgba(40, 57, 101, 0.9);
+}
+
+/* line 47, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+#submitWeather {
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 53, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+#show {
+  margin: auto;
+  width: 60%;
+}
+
+/* line 58, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+#weather-tile {
+  background: #adc3d1;
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  background-size: contain;
+  border-radius: 20px;
+  text-align: center;
+  margin: 1%;
+}
+
+/* line 73, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card {
+  height: 740px;
+  background: #fff;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+/* line 83, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+  text-align: center;
+}
+
+/* line 92, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-cloud {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://cdn.pixabay.com/photo/2014/07/04/10/15/sky-383823_960_720.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 102, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Thunderstorm {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://cdn.pixabay.com/photo/2017/08/01/22/38/flash-2568381_960_720.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 113, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Drizzle {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://files.differencebetween.com/wp-content/uploads/2014/11/Difference-Between-Showers-and-Rain.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 123, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Rain {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://files.differencebetween.com/wp-content/uploads/2014/11/Difference-Between-Showers-and-Rain.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 133, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Snow {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://media.idownloadblog.com/wp-content/uploads/2016/01/bokeh-snow-flare-water-white-splash-pattern-9-wallpaper.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 143, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Atmosphere {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://eskipaper.com/images/fog-7.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 153, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Clear {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://4.bp.blogspot.com/_tOJ-lqBX0wQ/TKzHK2u3PmI/AAAAAAAAAD0/yBauow-LYT4/s1600/Kayla+October+4+012.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 163, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Extreme {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://www.pannondoktor.hu/wp-content/uploads/2017/03/szelsoseges-idojaras-1170x528.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 173, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Additional {
+  position: relative;
+  height: 570px;
+  width: 100%;
+  overflow: hidden;
+  background: url("http://www.phantomacademy.com/wp-content/uploads/2016/07/windy-drone.jpg");
+  background-position: center center;
+  text-align: center;
+  background-size: cover;
+}
+
+/* line 185, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-cloud .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 190, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Thunderstorm .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 195, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Drizzle .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 200, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Rain .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 205, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Snow .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 210, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Atmosphere .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 215, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Clear .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 220, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Extreme .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 225, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .top-Additional .wrapper {
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 230, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.mynav {
+  height: 20px;
+}
+
+/* line 233, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .mynav .lnr {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* line 237, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .mynav .lnr-chevron-left {
+  display: inline-block;
+  float: left;
+}
+
+/* line 241, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .mynav .lnr-cross-circle {
+  display: inline-block;
+  float: right;
+}
+
+/* line 245, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .heading {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* line 251, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .heading-2 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* line 257, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .heading-3 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 266, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.top .wrapper .location {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* line 272, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .temp {
+  margin-top: 20px;
+}
+
+/* line 275, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .temp a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 279, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .temp a .temp-type {
+  font-size: 85px;
+}
+
+/* line 282, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 85px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* line 288, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.wrapper .temp .deg {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: top;
+  margin-top: -20px;
+}
+
+/* line 297, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom {
+  padding: 0 30px;
+  background: #fff;
+}
+
+/* line 301, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0;
+  padding: 0;
+  padding-top: 20px;
+  max-height: 155px;
+}
+
+/* line 309, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 313, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast .go-up {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* line 319, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li {
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+
+/* line 327, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li .date {
+  display: inline-block;
+}
+
+/* line 330, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li .condition {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  font-size: 25px;
+}
+
+/* line 336, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li .condition .temp {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2px;
+}
+
+/* line 344, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3px;
+  vertical-align: top;
+}
+
+/* line 351, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+  font-size: 20px;
+}
+
+/* line 354, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card .bottom .wrapper .forecast li.active {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 357, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.weather-card.rain .top {
+  background: url("http://img.freepik.com/free-vector/girl-with-umbrella_1325-5.jpg?size=338&ext=jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* line 363, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+/* line 364, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.clearfix:after, .clearfix:before {
+  content: '';
+  display: table;
+}
+
+/* line 365, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.clearfix:after {
+  clear: both;
+  display: block;
+}
+
+/* line 366, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 368, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-wrap {
+  width: 100%;
+  margin: auto;
+  max-width: 525px;
+  min-height: 670px;
+  position: relative;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 376, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 90px 70px 50px 70px;
+  background: rgba(40, 57, 101, 0.9);
+}
+
+/* line 383, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all .4s linear;
+}
+
+/* line 394, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+  display: none;
+}
+
+/* line 399, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+  text-transform: uppercase;
+}
+
+/* line 404, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .tab {
+  font-size: 22px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  margin: 0 15px 10px 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+/* line 412, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+  color: #fff;
+  border-color: #1161ee;
+}
+
+/* line 417, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form {
+  min-height: 345px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* line 423, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group {
+  margin-bottom: 15px;
+}
+
+/* line 426, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+  width: 100%;
+  color: #fff;
+  display: block;
+}
+
+/* line 433, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .input,
+.login-form .group .button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 440, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group input[data-type="password"] {
+  text-security: circle;
+  -webkit-text-security: circle;
+}
+
+/* line 444, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .label {
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* line 448, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .button {
+  background: #1161ee;
+}
+
+/* line 451, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group label .icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 459, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: all .2s ease-in-out 0s;
+}
+
+/* line 468, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group label .icon:before {
+  left: 3px;
+  width: 5px;
+  bottom: 6px;
+  transform: scale(0) rotate(0);
+}
+
+/* line 474, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group label .icon:after {
+  top: 6px;
+  right: 0;
+  transform: scale(0) rotate(0);
+}
+
+/* line 479, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .check:checked + label {
+  color: #fff;
+}
+
+/* line 482, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .check:checked + label .icon {
+  background: #1161ee;
+}
+
+/* line 485, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .check:checked + label .icon:before {
+  transform: scale(1) rotate(45deg);
+}
+
+/* line 488, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-form .group .check:checked + label .icon:after {
+  transform: scale(1) rotate(-45deg);
+}
+
+/* line 491, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm {
+  transform: rotate(0);
+}
+
+/* line 494, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+  transform: rotate(0);
+}
+
+/* line 498, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.hr {
+  height: 2px;
+  margin: 60px 0 50px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 503, /home/jason/forecast_app/app/assets/stylesheets/application.scss.erb */
+.foot-lnk {
+  text-align: center;
+}
