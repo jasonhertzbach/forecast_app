@@ -3,7 +3,7 @@ class CitiesController < ApplicationController
   before_action :authorize, except: [:home]
 
   caches_action :index
-  caches_action :show, expires_in: 300
+  caches_action :show, expires_in: 600
 
   def index
     @cities = current_user.cities.all
@@ -18,7 +18,7 @@ class CitiesController < ApplicationController
   # GET /cities/new
   def new
     @city = current_user.cities.new
-
+    expire_action :action => :index
   end
 
   # GET /cities/1/edit
@@ -65,6 +65,7 @@ class CitiesController < ApplicationController
       format.html { redirect_to cities_url, notice: 'City was successfully destroyed.' }
       format.json { head :no_content }
     end
+    expire_action :action => :index
   end
 
   private
