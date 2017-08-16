@@ -1,10 +1,8 @@
-
 <h1><center> <%= link_to 'Add a new city to your profile', new_city_path %></center></h1>
 
 
 
 <% @cities.each do |city| %>
-
 
 <div class="col-md-6">
   <div class="weather-card one ">
@@ -35,15 +33,11 @@
 
                     <% elsif  weather_get(city.name).parsed_response['weather'][0]['main'].include? "Additional" %>
                     <div class="top-Additional">
-
       <% else %>
       <div class="top">
 <% end %>
-
       <div class="wrapper">
         <div class="mynav">
-
-
           <%= link_to  city, method: :delete, data: { confirm: 'Are you sure?' } do  %>
           <span class="lnr lnr-cross-circle"></span>
           <% end %>
@@ -85,12 +79,9 @@
               </li>
             </ul>
           </div>
-
-
-
-
         </div>
       </div>
     </div>
 
     <% end if @cities.any? %>
+  

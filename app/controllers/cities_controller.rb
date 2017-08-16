@@ -2,12 +2,11 @@ class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:home]
 
-  # caches_page :home
-  caches_action :index, expires_in: 60
+  caches_action :index
+  caches_action :show, expires_in: 300
 
   def index
     @cities = current_user.cities.all
-
   end
 
   # GET /cities/1
@@ -19,6 +18,7 @@ class CitiesController < ApplicationController
   # GET /cities/new
   def new
     @city = current_user.cities.new
+
   end
 
   # GET /cities/1/edit
@@ -31,9 +31,9 @@ class CitiesController < ApplicationController
     @city = current_user.cities.new(city_params)
     created = weather_get(params[:city][:name])
     if created
-
       @city = current_user.cities.new(city_params)
       if @city.save
+        expire_action :action => :index
         redirect_to cities_path, notice: "City added."
       else
         render :new
@@ -68,6 +68,7 @@ class CitiesController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_city
     @city = current_user.cities.find(params[:id])
